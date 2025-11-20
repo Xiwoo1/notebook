@@ -4,6 +4,8 @@ const ejs = require ("ejs")
 const server = express()
 const port = 3030
 
+server.use(express.static("public"))
+
 const note_router = require("./routes/note")
 server.set("view engine", "ejs")
 
