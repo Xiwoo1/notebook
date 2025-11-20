@@ -9,7 +9,7 @@ body {
     font-family: sans-serif;
 }
 
-.card {
+.button {
     /* Blanc avec 45% d'opacité pour l'effet de transparence */
     background-color: rgba(255, 255, 255, 0.45);
     padding: 60px 100px;
@@ -26,7 +26,7 @@ body {
 }
 
 /* Effet au survol pour l'UX */
-.card:hover {
+.button:hover {
     transform: scale(1.02);
     background-color: rgba(255, 255, 255, 0.55);
 }
