@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-router.get ("/", functio (request, responde){
+router.get ("/", functio (request, response){
     response.render("note", {})
 })
 
