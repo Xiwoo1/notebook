@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    /* Dégradé linéaire du violet foncé (haut gauche) vers le rose vif (bas droite) */
+    background: linear-gradient(135deg, #4a1a88 0%, #e91e63 100%);
+    font-family: sans-serif;
+}
+
+.card {
+    /* Blanc avec 45% d'opacité pour l'effet de transparence */
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 60px 100px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Effet au survol pour l'UX */
+.card:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #222;
+}
