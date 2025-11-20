@@ -5,4 +5,4 @@ router.get ("/", function (request, response){
     response.render("note", {})
 })
 
-module.exports = routers
+module.exports = router
