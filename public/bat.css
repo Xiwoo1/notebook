@@ -1,0 +1,79 @@
+/* Reset de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* Dégradé rose vers violet */
+    background: linear-gradient(135deg, #c51a88 0%, #4b1a88 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* Styles communs pour les champs de saisie (effet verre) */
+.input-title, .input-area {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25); /* Blanc transparent */
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #333; /* Couleur du texte saisi */
+    font-size: 1.2rem;
+    outline: none;
+    resize: none; /* Empêche le redimensionnement manuel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder (texte gris clair) */
+::placeholder {
+    color: rgba(80, 80, 80, 0.5);
+}
+
+/* Spécifique au titre */
+.input-title {
+    height: 50px;
+    width: 70%; /* Le titre est souvent moins large que le corps */
+}
+
+/* Spécifique à la zone de texte */
+.input-area {
+    height: 400px;
+}
+
+/* Groupe de boutons */
+.button-group {
+    display: flex;
+    gap: 100px; /* Grand espace entre les deux boutons */
+    margin-top: 10px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 50px;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
