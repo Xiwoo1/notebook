@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const importBtn = document.querySelector('.button-import');
   const importInput = document.querySelector('.input-import');
+  const exportBtn = document.querySelector('.button-export');
   const titleInput = document.querySelector('.input-title');
   const textArea = document.querySelector('.input-area');
 
