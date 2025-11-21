@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commencer à écrire</title>
     <link rel="stylesheet" href="/bat.css">
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="container">
-        <input type="text" class="input-title" placeholder="Titre">
-        <textarea class="input-area" placeholder="Tapez votre texte ici"></textarea>
+        <input type="text" class="input-title" placeholder="Votre titre ici">
+        <textarea class="input-area" placeholder="Votre texte ici"></textarea>
         <div class="button-group">
-            <button type="button">Importer</button>
-            <button type="button">Exporter</button>
+            <input type="file" class="input-import" accept=".txt" style="display: none;">
+            <button class="button-import">Importer</button>
+            <button class="button-export">Exporter</button>
         </div>
     </div>
 </body>
