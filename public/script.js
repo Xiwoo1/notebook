@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const importBtn = document.querySelector('.button-import');
   const importInput = document.querySelector('.input-import');
-  const exportBtn = document.querySelector('.button-export');
   const titleInput = document.querySelector('.input-title');
   const textArea = document.querySelector('.input-area');
 
@@ -27,8 +26,46 @@ document.addEventListener('DOMContentLoaded', () => {
       textArea.value = texteLines.join('\n').trim();
     };
     reader.readAsText(file);
+      const conf = document.getElementById('conf');
+      conf.classList.add('show');
+
+  setTimeout(() => {
+  confirmation.classList.remove('show');
+  }, 3000);
   });
 });
 
 
 // Exporter
+document.addEventListener('DOMContentLoaded', () => {
+    const titleInput = document.querySelector('.input-title');
+    const textArea = document.querySelector('.input-area');
+    const exportBtn = document.querySelector('.button-export');
+
+exportBtn.addEventListener('click', () => {
+    const title = titleInput.value;
+    const text = textArea.value;
+
+    fetch('http://localhost:3030/export', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, text })
+    })
+    .then(response => response.blob())
+    .then(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${title || 'document'}.txt`;
+      a.click();
+      window.URL.revokeObjectURL(url);
+      const confirmation = document.getElementById('confirmation');
+      confirmation.classList.add('show');
+
+setTimeout(() => {
+  confirmation.classList.remove('show');
+}, 3000);
+
+    });
+  });
+})

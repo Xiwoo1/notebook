@@ -1,16 +1,14 @@
 body {
     margin: 0;
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    height: 100vh;
     display: flex;
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    /* Dégradé linéaire du violet foncé (haut gauche) vers le rose vif (bas droite) */
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, #4a1a88 0%, #e91e63 100%);
     font-family: sans-serif;
 }
 
 .button {
-    /* Blanc avec 45% d'opacité pour l'effet de transparence */
     background-color: rgba(255, 255, 255, 0.45);
     padding: 60px 100px;
     border: none;
@@ -25,7 +23,7 @@ body {
     color: #000;
 }
 
-/* Effet au survol pour l'UX */
+/* Effet au survol */
 .button:hover {
     transform: scale(1.02);
     background-color: rgba(255, 255, 255, 0.55);
