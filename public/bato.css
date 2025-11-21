@@ -18,6 +18,10 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s ease;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    color: #000;
 }
 
 /* Effet au survol pour l'UX */
