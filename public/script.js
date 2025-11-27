@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       conf.classList.add('show');
 
   setTimeout(() => {
-  confirmation.classList.remove('show');
+  conf.classList.remove('show');
   }, 3000);
   });
 });
