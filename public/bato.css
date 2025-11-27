@@ -23,7 +23,7 @@ body {
     color: #000;
 }
 
-/* Effet au survol */
+
 .button:hover {
     transform: scale(1.02);
     background-color: rgba(255, 255, 255, 0.55);
@@ -42,47 +42,44 @@ p {
     color: #222;
 }
 
-/* --- EASTER EGG --- */
-
-/* Zone cliquable invisible (Coin haut gauche) */
 .egg-trigger {
     position: fixed;
     top: 0;
     left: 0;
-    width: 50px;     /* Taille de la zone cliquable */
-    height: 50px;
+    width: 500px;     
+    height: 500px;
     background: transparent;
     border: none;
     z-index: 9999;
-    cursor: default; /* Curseur normal pour ne pas éveiller les soupçons */
+    cursor: default; 
 }
 
-/* Le fond noir (caché par défaut) */
+
 .egg-modal {
-    display: none;   /* Caché de base */
+    display: none;   
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fond sombre */
+    background-color: rgba(0, 0, 0, 0.9); 
     z-index: 10000;
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.3s ease;
 }
 
-/* L'image ou la vidéo de l'Easter Egg */
+
 .egg-modal img, 
 .egg-modal video {
     max-width: 80%;
     max-height: 80%;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-    outline: none; /* Enlève la bordure de sélection */
+    outline: none; 
 }
 
-/* Classe pour afficher le modal via JS */
+
 .egg-modal.show {
     display: flex;
 }

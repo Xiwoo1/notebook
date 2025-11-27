@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const textArea = document.querySelector('.input-area');
 
 
-  // Importer
+  
   importBtn.addEventListener('click', () => {
     importInput.click();
   });
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Exporter
+
 document.addEventListener('DOMContentLoaded', () => {
     const titleInput = document.querySelector('.input-title');
     const textArea = document.querySelector('.input-area');

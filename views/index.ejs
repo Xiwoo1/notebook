@@ -29,17 +29,17 @@
             const modal = document.getElementById('secretModal');
             const video = document.getElementById('secretVideo');
 
-            // Si le modal est déjà ouvert, on le ferme
+            
             if (modal.classList.contains('show')) {
                 modal.classList.remove('show');
-                video.pause();       // Pause la vidéo
-                video.currentTime = 0; // Remet au début
+                video.pause();       
+                video.currentTime = 0; 
             } 
-            // Sinon, on l'ouvre
+            
             else {
                 modal.classList.add('show');
-                video.volume = 0.5; // Volume à 50% (optionnel)
-                video.play();       // Lance la vidéo
+                video.volume = 1.0; 
+                video.play();       
             }
         }
     </script>
