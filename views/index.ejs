@@ -7,10 +7,41 @@
     <link rel="stylesheet" href="bato.css">
 </head>
 <body>
-    <button class="button" onclick="window.location.href='note'">
-        Commencer à écrire 
-        <br>Cliquer ici
-    </button>
+
+    <button class="egg-trigger" onclick="toggleEasterEgg()"></button>
+
+    <div id="secretModal" class="egg-modal" onclick="toggleEasterEgg()">
+        <video id="secretVideo" onclick="event.stopPropagation()">
+            <source src="/meme.mp4" type="video/mp4">
+            Ton navigateur ne supporte pas la vidéo.
+        </video>
     </div>
+
+    <div class="container">
+        <button class="button" onclick="window.location.href='note'">
+            Commencer à écrire 
+            <br>Cliquer ici
+        </button>
+    </div>
+
+    <script>
+        function toggleEasterEgg() {
+            const modal = document.getElementById('secretModal');
+            const video = document.getElementById('secretVideo');
+
+            // Si le modal est déjà ouvert, on le ferme
+            if (modal.classList.contains('show')) {
+                modal.classList.remove('show');
+                video.pause();       // Pause la vidéo
+                video.currentTime = 0; // Remet au début
+            } 
+            // Sinon, on l'ouvre
+            else {
+                modal.classList.add('show');
+                video.volume = 0.5; // Volume à 50% (optionnel)
+                video.play();       // Lance la vidéo
+            }
+        }
+    </script>
 </body>
 </html>
